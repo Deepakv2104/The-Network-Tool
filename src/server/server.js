@@ -16,8 +16,8 @@ app.post('/api/chatgpt', async (req, res) => {
     const openAIResponse = await fetch('https://api.openai.com/v1/completions', {
       method: 'POST',
       headers: {
-        // 'Content-Type': 'application/json',
-        // 'Authorization': `Bearer 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` 
+        'Content-Type': 'application/json',
+        'Authorization': `` 
       },
       body: JSON.stringify({
         messages: messages,
@@ -44,3 +44,5 @@ app.get('*', (req, res) => {
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+
+// Bearer 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
