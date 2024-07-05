@@ -16,8 +16,8 @@ app.post('/api/chatgpt', async (req, res) => {
     const openAIResponse = await fetch('https://api.openai.com/v1/completions', {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer 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`  // Replace with your actual API key
+        // 'Content-Type': 'application/json',
+        // 'Authorization': `Bearer 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` 
       },
       body: JSON.stringify({
         messages: messages,
