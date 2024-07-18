@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-
+import { useNavigate } from 'react-router-dom';
 const Login = ({ onLogin }) => {
+  const navigate = useNavigate();
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
@@ -8,6 +9,7 @@ const Login = ({ onLogin }) => {
   const handleLogin = () => {
     if (username === 'admin' && password === 'password123') {
       onLogin();
+      navigate('/dashboard/overview');
     } else {
       setError('Invalid credentials. Please try again.');
     }
