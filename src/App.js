@@ -12,6 +12,7 @@ import Dashboard from './components/dashboard/Dashboard';
 import F5Status from './components/dashboard/F5';
 import Overview from './components/dashboard/overview';
 import Discovery42 from './components/dashboard/discovery42';
+import FortinetStatus from './components/dashboard/fortinet/fortinet-status';
 
 function App() {
     const [loggedIn, setLoggedIn] = useState(false);
@@ -27,6 +28,7 @@ function App() {
                             <Route path="/device-health-summary" element={<DeviceHealthSummary />} />
                             <Route path="/dashboard" element={<Dashboard />}>
                                 <Route path="overview" element={<Overview />} />
+                                <Route path="meter/Fotinet Status" element={<FortinetStatus />} />
 
                                 <Route path="meter/:label" element={<F5Status />} />
                                 <Route path="meter/Device42 Status" element={<Discovery42 />} />
